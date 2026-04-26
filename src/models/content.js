@@ -30,10 +30,10 @@ const Content=sequelize.define("Content",{
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    uploaded_by:{
+  /*  uploaded_by:{
         type:DataTypes.STRING,
         allowNull:false
-    },
+    },*/
     status:{
         type:DataTypes.ENUM("pending","approved","rejected"),
         defaultValue:"pending"
@@ -42,10 +42,10 @@ const Content=sequelize.define("Content",{
         type:DataTypes.TEXT,
         allowNull:true
     },
-    approved_by:{
+ /*   approved_by:{
         type:DataTypes.STRING,
         allowNull:true
-    },
+    },*/
     approved_at:{
         type:DataTypes.DATE,
         allowNull:true

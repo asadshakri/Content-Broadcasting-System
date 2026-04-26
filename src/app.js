@@ -9,7 +9,11 @@ const mysql2=require("mysql2");
 const db=require("./utils/db-connection");
 
 require("./models");
+const authRoutes=require("./routes/authRoutes");
 
+app.use(express.json());
+
+app.use("/user",authRoutes);
 
 
 db.sync({force:false}).then(()=>{

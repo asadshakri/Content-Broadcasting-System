@@ -8,14 +8,14 @@ const Schedule=sequelize.define("Schedule",{
         primaryKey:true,
         autoIncrement:true
     },
-    content_id:{
+  /*  content_id:{
         type:DataTypes.INTEGER,
         allowNull:false
     },
     slot_id:{
         type:DataTypes.INTEGER,
         allowNull:false
-    },
+    },*/
     rotation_order:{
         type:DataTypes.INTEGER,
         allowNull:false
