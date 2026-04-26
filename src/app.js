@@ -8,6 +8,8 @@ const port=process.env.PORT;
 const mysql2=require("mysql2");
 const db=require("./utils/db-connection");
 
+require("./models");
+
 
 
 db.sync({force:false}).then(()=>{
