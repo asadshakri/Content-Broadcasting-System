@@ -111,7 +111,7 @@ Authorization: Bearer TOKEN
 1. Upload Content ->   POST /content/upload
 
 Body:  
-![][image1]
+![System Diagram](./formData.png)
 
 Response  
 ```json
