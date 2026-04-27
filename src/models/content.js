@@ -40,7 +40,6 @@ const Content=sequelize.define("Content",{
     },
     rejection_reason:{
         type:DataTypes.TEXT,
-        allowNull:true
     },
  /*   approved_by:{
         type:DataTypes.STRING,
@@ -48,15 +47,12 @@ const Content=sequelize.define("Content",{
     },*/
     approved_at:{
         type:DataTypes.DATE,
-        allowNull:true
     },
     start_time:{
         type:DataTypes.DATE,
-        allowNull:true
     },
     end_time:{
         type:DataTypes.DATE,
-        allowNull:true
     }
 
 },{

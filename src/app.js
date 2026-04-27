@@ -11,10 +11,12 @@ const db=require("./utils/db-connection");
 require("./models");
 const authRoutes=require("./routes/authRoutes");
 const contentRoutes=require("./routes/contentRoutes");
+const principalRoutes=require("./routes/principalRoutes");
 app.use(express.json());
 
 app.use("/user",authRoutes);
 app.use("/content",contentRoutes);
+app.use("/principal",principalRoutes);
 
 
 db.sync({force:false}).then(()=>{

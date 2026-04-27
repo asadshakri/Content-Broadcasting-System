@@ -5,7 +5,7 @@ const user=require("../models/user");
 
 const authenticate= async(req,res,next)=>{
     const Btoken=req.header("Authorization")
-    if(!token){
+    if(!Btoken){
         res.status(401).json({message:"token not provided"});
     }
     const token=Btoken.split(" ")[1];
