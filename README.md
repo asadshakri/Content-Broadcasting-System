@@ -34,7 +34,7 @@ A backend system for modern educational institutes where teachers upload study c
 
 ### Clone Project
 ```bash
-  git clone \<your-repo-url\>  
+  git clone https://github.com/asadshakri/Content-Broadcasting-System.git
   cd content-broadcasting-system
  ```
 
@@ -111,7 +111,7 @@ Authorization: Bearer TOKEN
 1. Upload Content ->   POST /content/upload
 
 Body:  
-![formdata](formdata.png)
+![formdata](formdata.PNG)
 
 Response  
 ```json
