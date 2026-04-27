@@ -8,7 +8,11 @@ const liveContent=async(req,res)=>{
 
     const subject=req.query.subject;
     const teacherId=req.params.teacherId;
-   
+
+    if(!subject){
+        return res.status(400).json({message:"Subject is required"});
+    }
+
     try{
 
     const slot=await slots.findOne({
