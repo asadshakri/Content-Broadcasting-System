@@ -10,10 +10,11 @@ const db=require("./utils/db-connection");
 
 require("./models");
 const authRoutes=require("./routes/authRoutes");
-
+const contentRoutes=require("./routes/contentRoutes");
 app.use(express.json());
 
 app.use("/user",authRoutes);
+app.use("/content",contentRoutes);
 
 
 db.sync({force:false}).then(()=>{

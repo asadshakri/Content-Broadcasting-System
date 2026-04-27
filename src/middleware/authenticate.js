@@ -4,12 +4,14 @@ const user=require("../models/user");
 
 
 const authenticate= async(req,res,next)=>{
-    const token=req.headers("Authorization");
+    const Btoken=req.header("Authorization")
     if(!token){
         res.status(401).json({message:"token not provided"});
     }
+    const token=Btoken.split(" ")[1];
     try{
-        const decodedToken=jwt.verify(token,process.env.JWT_SECRET);
+        const decodedToken=jwt.verify(token,process.env.TOKEN);
+        console.log(decodedToken);
         const loginUser= await user.findByPk(decodedToken.userId);
         if(!loginUser){
             res.status(401).json({message:"Invalid token"});
