@@ -1,6 +1,6 @@
 const express=require("express");
 const app=express();
-
+const cors=require("cors");
 
 require("dotenv").config();
 
@@ -14,6 +14,7 @@ const contentRoutes=require("./routes/contentRoutes");
 const principalRoutes=require("./routes/principalRoutes");
 const publicRoutes=require("./routes/publicRoutes");
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/user",authRoutes);
