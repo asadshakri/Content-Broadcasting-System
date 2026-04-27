@@ -1,6 +1,7 @@
 const Content = require("../models/content");
 const Slot = require("../models/slot");
 const Schedule = require("../models/schedule");
+
 const s3 = require("../utils/s3");
 require("dotenv").config();
 const sequelize = require("../utils/db-connection");
@@ -26,7 +27,7 @@ const uploadContentService = async (body, file, userId) => {
     })
     .promise();
 
-  const contentDetails = await content.create({
+  const contentDetails = await Content.create({
     title: body.title,
     description: body.description,
     subject: body.subject,
