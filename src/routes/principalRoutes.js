@@ -6,7 +6,7 @@ const role=require("../middleware/role");
 
 router.get("/uploaded-contents",authenticate,role("principal"),principalController.uplaadedContent);
 router.get("/pending-contents",authenticate,role("principal"),principalController.pendingContent);
-router.post("/reject-content/:id",authenticate,role("principal"),principalController.rejectContent);
-router.post("/approve-content/:id",authenticate,role("principal"),principalController.approveContent);
+router.patch("/reject-content/:id",authenticate,role("principal"),principalController.rejectContent);
+router.patch("/approve-content/:id",authenticate,role("principal"),principalController.approveContent);
 
 module.exports=router;

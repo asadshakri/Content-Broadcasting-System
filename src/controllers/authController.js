@@ -49,7 +49,7 @@ const login=async(req,res)=>{
             return res.status(400).json({message:"Invalid password"});
         }
         
-        const token=jwt.sign({userId:loginUser.id},process.env.TOKEN,{expiresIn:"1h"});
+        const token=jwt.sign({userId:loginUser.id},process.env.TOKEN,{expiresIn:"5h"});
         res.status(200).json({token:token,message:"Login successful"});
 
     }

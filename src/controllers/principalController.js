@@ -61,32 +61,6 @@ const approveContent=async(req,res)=>{
     
             res.status(200).json({message:"Content approved successfully",contentApproved:contentToApprove});
 
-        const [slot]= await slots.findOrCreate({
-            where:{
-                subject:contentToApprove.subject,
-            }
-        })
-
-        const existingSchedule= await schedule.findOne({
-            where:{
-                content_id:contentId
-            }
-        });
-
-        if (!existing) {
-            const max = await schedule.max("rotation_order", {
-              where: { slot_id: slot.id }
-            });
-        
-            await schedule.create({
-              content_id: content.id,
-              slot_id: slot.id,
-              rotation_order: (max || 0) + 1,
-              duration: 5
-            });
-          }
-
-          res.status(200).json({message:"Content approved and scheduled successfully",contentApproved:contentToApprove});
     }
     catch(err){
         res.status(500).json({message:err.message});

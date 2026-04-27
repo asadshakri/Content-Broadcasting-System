@@ -12,11 +12,14 @@ require("./models");
 const authRoutes=require("./routes/authRoutes");
 const contentRoutes=require("./routes/contentRoutes");
 const principalRoutes=require("./routes/principalRoutes");
+const publicRoutes=require("./routes/publicRoutes");
+
 app.use(express.json());
 
 app.use("/user",authRoutes);
 app.use("/content",contentRoutes);
 app.use("/principal",principalRoutes);
+app.use("/api",publicRoutes);
 
 
 db.sync({force:false}).then(()=>{
