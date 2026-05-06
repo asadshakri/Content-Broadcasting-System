@@ -4,6 +4,16 @@ A backend system for modern educational institutes where teachers upload study c
 
 ---
 
+## Demo 
+```
+https://drive.google.com/file/d/184k6kfnX0tNXoFOPbl8vz5UG2lbtAeiN/view?usp=sharing
+```
+
+## Postman Link
+```
+https://documenter.getpostman.com/view/47935927/2sBXqJJKwu
+```
+
 ## Tech Stack
 
 ### Backend  
